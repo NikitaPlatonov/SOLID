@@ -40,5 +40,6 @@ public class Purchase {
             if (purchase == null) continue;
             System.out.println("\t" + purchase.title + " " + purchase.count + " шт. в сумме " + (purchase.count * prices.get(purchase.title)) + " руб.");
         }
+        System.out.println("Сумма всех товаров в корзине: " + this.sum(prices));
     }
 }

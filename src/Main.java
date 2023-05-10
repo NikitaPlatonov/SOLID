@@ -27,7 +27,6 @@ public class Main {
             int count = Integer.parseInt(parts[1]);
             purchase.addPurchase(product, count);
         }
-        long sum = purchase.sum(products);
-        System.out.println("ИТОГО: " + sum);
+        purchase.showingTheBasket(products);
     }
 }

@@ -1,9 +1,11 @@
 import java.util.Map;
 
 public class Purchase {
+
     protected String title;
     protected int count;
-    protected Purchase[] purchases = new Purchase[4];
+    protected int SIZE_BASKET = 4;
+    protected Purchase[] purchases = new Purchase[SIZE_BASKET];
 
     public Purchase(String title, int count) {
         this.title = title;

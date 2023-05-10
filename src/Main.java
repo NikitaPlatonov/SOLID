@@ -3,6 +3,12 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
+    public static void showProductsInShop(Map<String, Integer> products) {
+        System.out.println("В МАГАЗИНЕ В НАЛИЧИИ");
+        for (Map.Entry<String, Integer> productAndPrice : products.entrySet()) {
+            System.out.println(productAndPrice.getKey() + " за " + productAndPrice.getValue() + " руб./шт.");
+        }
+    }
 
     public static void main(String[] args) {
         HashMap<String, Integer> products = new HashMap<>();
@@ -10,12 +16,7 @@ public class Main {
         products.put("Масло", 153);
         products.put("Колбаса", 211);
         products.put("Пирожок", 45);
-
-        System.out.println("В МАГАЗИНЕ В НАЛИЧИИ");
-        for (Map.Entry<String, Integer> productAndPrice : products.entrySet()) {
-            System.out.println(productAndPrice.getKey() + " за " + productAndPrice.getValue() + " руб./шт.");
-        }
-
+        showProductsInShop(products);
         System.out.println("Введите два слова: название товара и количество. Или end");
         Scanner scanner = new Scanner(System.in);
         Purchase purchase = new Purchase();

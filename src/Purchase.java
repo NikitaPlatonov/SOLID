@@ -36,7 +36,8 @@ public class Purchase {
         }
         return sum;
     }
-    public void showingTheBasket(Map<String, Integer> prices){
+
+    public void showingTheBasket(Map<String, Integer> prices) {
         System.out.println("КОРЗИНА:");
         for (Purchase purchase : purchases) {
             if (purchase == null) continue;
